@@ -11,3 +11,23 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.no-decoration {
+  text-decoration: none;
+  color: white;
+}
+
+.background {
+  height: 100vh;
+  background-image: url('https://wallpapercave.com/wp/wp2776799.jpg');
+}
+
+.background-div {
+  background-color: rgb(235, 234, 240);
+  text-align: center;
+}
+
+.header {
+  width: 70%;
+  margin-top: 10%;
+}

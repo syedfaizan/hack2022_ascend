@@ -21,6 +21,7 @@ function App() {
               ingredients: '',
               instructions: '',
               note: '',
+              url: '',
               nutritionalInfo: ''
             }}
             // validate={(values) => {
@@ -38,6 +39,7 @@ function App() {
                 'ingredients',
                 'instructions',
                 'note',
+                'url',
                 'nutritionalInfo'
               ]);
               recipe.author = localStorage.getItem('userId');
@@ -91,7 +93,7 @@ function App() {
                       <TextField
                         type='text'
                         name='dek'
-                        label='dek'
+                        label='Dek'
                         margin='dense'
                         fullWidth
                         error={errors.dek && touched.dek}
@@ -201,7 +203,7 @@ function App() {
                         multiline
                         rows={4}
                         name='nutritionalInfo'
-                        label='NutritionalInfo'
+                        label='Nutritional Info'
                         margin='dense'
                         fullWidth
                         error={
@@ -217,7 +219,24 @@ function App() {
                         value={values.nutritionalInfo}
                       />
                     </Grid>
+                    <Grid item xs={12}>
+                      <TextField
+                        type='text'
+                        multiline
+                        rows={4}
+                        name='url'
+                        label='url'
+                        margin='dense'
+                        fullWidth
+                        error={errors.url && touched.url}
+                        onChange={handleChange}
+                        onBlur={handleBlur}
+                        helperText={errors.url && touched.url && errors.url}
+                        value={values.url}
+                      />
+                    </Grid>
                     <Button
+                      fullWidth
                       type='submit'
                       margin='dense'
                       variant='contained'
